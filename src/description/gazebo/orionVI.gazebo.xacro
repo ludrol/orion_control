@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+Copied and modified from ROS1 example -
+https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/rrbot_description/urdf/rrbot.gazebo
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- ros_control plugin -->
+    <gazebo>
+      <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+        <parameters>$(find orion_control)/config/orionVI_controllers.yaml</parameters>
+      </plugin>
+    </gazebo>
+
+
+    <!--
+    <xacro:macro name="link" params="link_name material">
+    <gazebo reference="${link_name}">
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>${material}</name>
+        </script>
+      </material>
+    </gazebo>
+    </xacro:macro>
+    
+    <xacro:link link_name="chassis" material=Gazebo/Yellow />
+    <xacro:link link_name="left_subchassis" material=Gazebo/Yellow />
+    <xacro:link link_name="right_subchassis" material=Gazebo/Yellow />
+    -->
+    
+
+</robot>
