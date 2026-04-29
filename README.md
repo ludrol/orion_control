@@ -1,5 +1,21 @@
-# ros2_control_demo_example_9
+# orion_control
+This package translates a singular input vector into separate wheel and turntable commands, using the ros2_control framework.
+## Building from source
+To build the package run:
+```
+colcon build --merge-install
+source install/local_setup.bash
+```
+A custom version of swerve_drive_controller is required.
+It can be found here: [text](https://github.com/Bungok/ros2_controllers_orion)
+In the ros2_controllers_orion directory run:
+```
+colcon build --packages-select swerve_drive_controller
+source install/local_setup.bash
+```
 
-   This example demonstrates the switching between simulation and real hardware by means of the *RRBot* - or ''Revolute-Revolute Manipulator Robot''.
-
-Find the documentation in [doc/userdoc.rst](doc/userdoc.rst) or on [control.ros.org](https://control.ros.org/master/doc/ros2_control_demos/example_9/doc/userdoc.html).
+## Running
+To run in the Gazebo simulation mode run:
+```
+ros2 launch orion_control orionVI_gazebo.launch.py
+```
