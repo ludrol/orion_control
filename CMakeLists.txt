@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.8)
 project(orion_control LANGUAGES CXX)
 
 find_package(ros2_control_cmake REQUIRED)
@@ -11,6 +11,8 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
   pluginlib
   rclcpp
   rclcpp_lifecycle
+  rclpy
+  mqtt_hardware_interface
 )
 
 # Specify the required version of ros2_control
@@ -44,6 +46,7 @@ target_link_libraries(orion_control PUBLIC
   pluginlib::pluginlib
   rclcpp::rclcpp
   rclcpp_lifecycle::rclcpp_lifecycle
+  mqtt_hardware_interface::MqttHardwareInterface
 )
 
 # Export hardware plugins

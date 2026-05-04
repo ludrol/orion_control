@@ -9,7 +9,7 @@
           <plugin>gz_ros2_control/GazeboSimSystem</plugin>
         </xacro:if>
         <xacro:unless value="${use_gazebo}">
-          <plugin>MqttHardwareInterface</plugin>
+          <plugin>mqtt_hardware_interface/MqttHardwareInterface</plugin>
           <param name="mqtt_broker_uri">"mqtt://localhost:1884"</param>
           <param name="mqtt_client_id">"MqttHardwareInterface"</param>
           <param name="QOS">0</param>
@@ -19,8 +19,6 @@
       <xacro:macro name="turntable" params="prefix topic_state topic_com">
         <joint name="${prefix}_turntable_joint">
           <command_interface name="position">
-            <param name="min">-1</param>
-            <param name="max">1</param>
             <param name="topic">${topic_com}</param>
           </command_interface>
           <state_interface name="position">
@@ -32,8 +30,6 @@
       <xacro:macro name="wheel" params="prefix topic_state topic_com">
         <joint name="${prefix}_wheel_joint">
           <command_interface name="velocity">
-            <param name="min">-1</param>
-            <param name="max">1</param>
             <param name="topic">${topic_com}</param>
           </command_interface>
           <state_interface name="velocity">

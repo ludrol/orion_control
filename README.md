@@ -6,9 +6,10 @@ To build the package run:
 colcon build --merge-install
 source install/local_setup.bash
 ```
-A custom version of swerve_drive_controller is required.
-It can be found [here.](https://github.com/Bungok/ros2_controllers_orion)
-In the ros2_controllers_orion directory run:
+Install required dependencies:
+https://github.com/Bungok/mqtt_hardware_interface/tree/main
+https://github.com/Bungok/ros2_controllers_orion
+For swerve drive controller, in the ros2_controllers_orion directory run:
 ```
 colcon build --packages-select swerve_drive_controller
 source install/local_setup.bash
