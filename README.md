@@ -4,7 +4,7 @@ This package translates a singular input vector into separate wheel and turntabl
 
 Install required dependencies:
 ```
-sudo apt install ros-${ROS_DISTRO}-ros2-control ros-${ROS_DISTRO}-ros2-controllers ros-${ROS_DISTRO}-ros2-control-cmake
+sudo apt install ros-${ROS_DISTRO}-ros2-control ros-${ROS_DISTRO}-ros2-controllers ros-${ROS_DISTRO}-ros2-control-cmake ros-$ROS_DISTRO-gz-ros2-control
 sudo apt install libpaho-mqtt-dev
 #sudo apt install libpaho-mqttpp-dev #idk if this is required
 ```
