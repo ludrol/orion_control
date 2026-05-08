@@ -45,3 +45,8 @@ To run in the Gazebo simulation mode run:
 ```
 ros2 launch orion_control orionVI_gazebo.launch.py
 ```
+
+To send /cmd_vel from your gamepad use:
+```
+ros2 launch teleop_twist_joy teleop-launch.py joy_config:='xbox'
+```
