@@ -12,7 +12,7 @@
           <plugin>mqtt_hardware_interface/MqttHardwareInterface</plugin>
           <param name="mqtt_broker_uri">"mqtt://localhost:1884"</param>
           <param name="mqtt_client_id">"MqttHardwareInterface"</param>
-          <param name="QOS">0</param>
+          <param name="qos">0</param>
         </xacro:unless>
       </hardware>
 
